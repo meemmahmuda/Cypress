@@ -12,4 +12,4 @@ describe('cypress test', () => {
         cy.title().should('eq', 'Dashboard') 
     })
 
-})
+}
