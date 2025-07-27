@@ -1,11 +1,12 @@
 Concept	Description
-cy.visit()	Opens the target website URL.
-cy.get()	Selects DOM elements (e.g., buttons, inputs).
+
+cy.visit()	    Opens the target website URL.
+cy.get()	    Selects DOM elements (buttons, inputs).
 cy.contains()	Finds an element containing specific text.
-cy.type()	Types into input fields.
-cy.click()	Clicks on a selected element.
-cy.url()	Gets the current URL.
-cy.should()	Asserts expectations (e.g., visibility, text).
+cy.type()	    Types into input fields.
+cy.click()	    Clicks on a selected element.
+cy.url()	    Gets the current URL.
+cy.should()	    Asserts expectations (visibility, text).
 beforeEach()	Runs code before every test (setup).
-describe()	Groups a set of related tests.
-it()	Defines individual test cases.
+describe()	    Groups a set of related tests.
+it()	        Defines individual test cases.

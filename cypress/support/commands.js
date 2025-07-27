@@ -25,8 +25,6 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-
-
 Cypress.Commands.add('Login', (email, password) => {
     cy.visit('http://courier.sanjoydeyreju.com')
 
@@ -36,4 +34,6 @@ Cypress.Commands.add('Login', (email, password) => {
 
     cy.url().should('include', '/dashboard')
 });
+
+
 
