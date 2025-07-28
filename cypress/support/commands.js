@@ -26,7 +26,7 @@
 
 
 Cypress.Commands.add('Login', (email, password) => {
-    cy.visit('http://courier.sanjoydeyreju.com')
+    cy.visit('https://list.sanjoydeyreju.com/')
 
     cy.get('input[name="email"]').should('be.visible').type(email)
     cy.get('input[name="password"]').type(password)

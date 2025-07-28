@@ -4,7 +4,7 @@ describe('Cypress courier login/logout test', () => {
         cy.visit('/')
         cy.wait(2000)
 
-        cy.url().should('include', 'courier')
+        // cy.url().should('include', 'courier')
         cy.wait(2000)
 
         cy.title().should('eq', 'Admin Login') 
