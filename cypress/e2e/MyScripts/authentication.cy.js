@@ -25,7 +25,7 @@ describe('Navigation Test', () => {
     cy.clearLocalStorage();
 
     // Visit protected route
-    cy.visit('https://list.sanjoydeyreju.com/cancelled', { failOnStatusCode: false });
+    cy.visit('https://list.sanjoydeyreju.com/cancelled');
 
     // Should be redirected to login
     cy.url().should('eq', 'https://list.sanjoydeyreju.com/');
