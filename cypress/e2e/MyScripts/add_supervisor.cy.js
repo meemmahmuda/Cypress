@@ -4,7 +4,7 @@ describe('Add Supervisor Test', () => {
 
     // Step 1: Visit Login Page
     cy.visit('https://list.sanjoydeyreju.com/');
-    cy.wait(1000); // wait 1 second
+    cy.wait(1000); 
 
     // Step 2: Login
     cy.get('input[name="email"]').type('admin@gmail.com');

@@ -14,7 +14,7 @@ describe('Edit Specific DM Test', () => {
     // Step 2: Go to Supervisor List page
     cy.visit('https://list.sanjoydeyreju.com/deliveryman/profile');
 
-    cy.contains('button, a', 'Edit').click();  // This covers <button> or <a> with text "Edit"
+    cy.contains('button, a', 'Edit').click();  
     cy.wait(1000);
 
 
@@ -23,13 +23,9 @@ describe('Edit Specific DM Test', () => {
     cy.get('input[name="password"]').clear().type('05145ghgfhgdf');
     cy.get('textarea[name="address"]').clear().type('Dhaka');
     cy.get('input[name="mobile"]').clear().type('01888888957');
-    // Upload image file
     cy.get('input[name="image"]').selectFile('cypress/fixtures/download.png', { force: true });
 
-  //   // Step 5: Submit the form
+  // Step 5: Submit the form
     cy.contains('button', 'Update').click();
-
-  //   // Step 6: Assert success message
-  //   // cy.contains('Supervisor updated successfully').should('exist');
   });
 });

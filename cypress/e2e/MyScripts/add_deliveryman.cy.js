@@ -4,7 +4,7 @@ describe('Add DM Test', () => {
 
     // Step 1: Visit Login Page
     cy.visit('https://list.sanjoydeyreju.com/');
-    cy.wait(1000); // wait 1 second
+    cy.wait(1000); 
 
     // Step 2: Login
     cy.get('input[name="email"]').type('admin@gmail.com');
@@ -39,9 +39,6 @@ describe('Add DM Test', () => {
     cy.wait(500);
     cy.get('input[name="nid"]').type('5105186638');
     cy.wait(500);
-
-    // Step 6: Select a supervisor from dropdown
-
 
     // Step 7: Submit the form
     cy.contains('button', 'Submit').click();
