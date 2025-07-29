@@ -23,6 +23,7 @@ describe('Cypress courier login/logout test', () => {
         cy.title().should('eq', 'Dashboard') 
         cy.wait(2000)
 
+        
         cy.contains('a.nav-link', 'Log out').click({ force: true })
         cy.wait(2000)
 
