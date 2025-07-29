@@ -33,6 +33,5 @@ describe('Navigation Test', () => {
     // Should be redirected to login
     cy.url().should('eq', 'https://list.sanjoydeyreju.com/');
     cy.wait(500);
-  });
-  
+  });  
 });
