@@ -6,7 +6,6 @@ describe('Cypress courier login/logout test', () => {
         cy.wait(2000)
         // cy.url().should('include', 'courier')
         cy.wait(2000)
-
         cy.title().should('eq', 'Admin Login') 
         cy.wait(2000)
     })
@@ -21,11 +20,8 @@ describe('Cypress courier login/logout test', () => {
 
         cy.title().should('eq', 'Dashboard') 
         cy.wait(2000)
-
-
         cy.contains('a.nav-link', 'Log out').click({ force: true })
         cy.wait(2000)
-
         cy.url().should((url) => {
             expect(url).to.match(/\/(login)?$/)
         })
