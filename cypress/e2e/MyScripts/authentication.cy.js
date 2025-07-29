@@ -1,6 +1,7 @@
 describe('Navigation Test', () => {
   it('should navigate to Dashboard and Cancelled pages after login', () => {
     cy.visit('https://list.sanjoydeyreju.com/');
+    cy.viewport(1280, 900); 
 
     // Login
     cy.get('input[name="email"]').type('admin@gmail.com');
@@ -26,9 +27,12 @@ describe('Navigation Test', () => {
 
     // Visit protected route
     cy.visit('https://list.sanjoydeyreju.com/cancelled');
+    cy.viewport(1280, 900); 
+    cy.wait(500);
 
     // Should be redirected to login
     cy.url().should('eq', 'https://list.sanjoydeyreju.com/');
+    cy.wait(500);
   });
   
 });
