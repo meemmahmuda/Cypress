@@ -1,6 +1,6 @@
 describe('Add DM Test', () => {
   it('should login and add a new delivery man successfully', () => {
-    cy.viewport(1280, 900); 
+    cy.viewport(1280, 900);
 
     // Step 1: Visit Login Page
     cy.visit('https://list.sanjoydeyreju.com/');
