@@ -1,6 +1,7 @@
 describe('Cypress courier login/logout test', () => {
 
     it('Navigate to courier', () => {
+        cy.viewport(1280, 900);
         cy.visit('/')
         cy.wait(2000)
 
@@ -12,6 +13,7 @@ describe('Cypress courier login/logout test', () => {
     })
 
     it('Login and logout courier', () => {
+        cy.viewport(1280, 900);
         cy.Login("admin@gmail.com", "111")  
         cy.wait(2000)
 
