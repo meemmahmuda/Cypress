@@ -1,6 +1,6 @@
 describe('Deliveryman OTP Enforcement', () => {
   const baseUrl = 'http://127.0.0.1:8000';
-  const loginEmail = 'dm1@gmail.com'; // Make sure this user exists
+  const loginEmail = 'dm1@gmail.com'; 
   const loginPassword = '123456789';
 
   beforeEach(() => {
