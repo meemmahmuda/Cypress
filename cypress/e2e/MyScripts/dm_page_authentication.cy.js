@@ -18,7 +18,6 @@ describe('Deliveryman Routes - Guest Access Protection', () => {
           url: `${baseUrl}${route.uri}`,
           failOnStatusCode: false,
         }).then((res) => {
-          // Laravel usually redirects (302) or throws a 419/401 for unauthenticated POSTs
           expect([302, 401, 419]).to.include(res.status);
         });
       }
