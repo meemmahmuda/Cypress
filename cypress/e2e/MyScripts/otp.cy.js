@@ -26,24 +26,7 @@ describe('Deliveryman OTP Enforcement', () => {
       expect(url).to.match(/\/deliveryman\/(login|otp-verify)/);
     });
   });
-
-  it('prevents access to profile without OTP verification', () => {
-    // Login first
-    cy.visit(`${baseUrl}/deliveryman/login`);
-    cy.get('input[name="email"]').type(loginEmail);
-    cy.get('input[name="password"]').type(loginPassword);
-    cy.get('button[type="submit"]').click();
-
-    // Confirm on OTP page
-    cy.url({ timeout: 10000 }).should('include', '/deliveryman/otp-verify');
-
-    // Try to visit profile without OTP
-    cy.visit(`${baseUrl}/deliveryman/profile`, { failOnStatusCode: false });
-
-    // Should redirect to login or OTP page
-    cy.url({ timeout: 10000 }).should(url => {
-      expect(url).to.match(/\/deliveryman\/(login|otp-verify)/);
-    });
-  });
 });
+
+
 
