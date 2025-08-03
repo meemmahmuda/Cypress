@@ -10,7 +10,7 @@ describe('Deliveryman Routes - Guest Access Protection', () => {
   it('should redirect unauthenticated user to login for all protected routes', function () {
     this.routesToTest.forEach((route) => {
       if (route.method === 'GET') {
-        cy.visit(`${baseUrl}${route.uri}`, { failOnStatusCode: false });
+        cy.visit(`${baseUrl}${route.uri}`);
         cy.url().should('include', '/deliveryman/login');
       } else if (route.method === 'POST') {
         cy.request({

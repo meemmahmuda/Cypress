@@ -10,7 +10,7 @@ describe('Supervisor Routes - Guest Access Protection', () => {
   it('should redirect all protected routes to login when not authenticated', function () {
     this.routesToTest.forEach((route) => {
       if (route.method === 'GET') {
-        cy.visit(`${baseUrl}${route.uri}`, { failOnStatusCode: false });
+        cy.visit(`${baseUrl}${route.uri}`);
         cy.url().should('include', '/supervisor/login');
       } else if (route.method === 'POST') {
         cy.request({
