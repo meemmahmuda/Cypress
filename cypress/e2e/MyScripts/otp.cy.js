@@ -21,10 +21,8 @@ describe('Deliveryman OTP Enforcement', () => {
     // Step 2: Try to directly visit dashboard without submitting OTP
     cy.visit(`${baseUrl}/deliveryman/dashboard`);
 
-    // Should redirect to login or OTP page
-    cy.url({ timeout: 10000 }).should(url => {
-      expect(url).to.match(/\/deliveryman\/(login|otp-verify)/);
-    });
+    // Redirect to login page
+    cy.url({ timeout: 10000 }).should('include', '/deliveryman/login');
   });
 });
 
